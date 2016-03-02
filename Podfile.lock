@@ -1,0 +1,59 @@
+PODS:
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - SalesforceNetwork (4.1.1):
+    - SalesforceNetwork/SalesforceNetwork (= 4.1.1)
+  - SalesforceNetwork/SalesforceNetwork (4.1.1):
+    - SalesforceSDKCore
+  - SalesforceRestAPI (4.1.1):
+    - SalesforceRestAPI/SalesforceRestAPI (= 4.1.1)
+  - SalesforceRestAPI/SalesforceRestAPI (4.1.1):
+    - SalesforceNetwork
+    - SalesforceSDKCore
+  - SalesforceSDKCore (4.1.1):
+    - SalesforceSDKCore/SalesforceSDKCore (= 4.1.1)
+  - SalesforceSDKCore/SalesforceSDKCore (4.1.1):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/arc (= 4.1.1)
+    - SalesforceSDKCore/SalesforceSDKCore/base (= 4.1.1)
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc (= 4.1.1)
+  - SalesforceSDKCore/SalesforceSDKCore/arc (4.1.1):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc
+  - SalesforceSDKCore/SalesforceSDKCore/base (4.1.1):
+    - CocoaLumberjack (~> 2.2.0)
+  - SalesforceSDKCore/SalesforceSDKCore/no-arc (4.1.1):
+    - CocoaLumberjack (~> 2.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - SalesforceNetwork
+  - SalesforceRestAPI
+  - SalesforceSDKCore
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  SalesforceNetwork: ad6107821454c20e062965663636120ea06f82a3
+  SalesforceRestAPI: 981a241137a8756709f163a8aa7b13f6a4686945
+  SalesforceSDKCore: 2e062ccc854dd89f90d6461db804ff8b81fed84e
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SalesforceSans-Regular.ttf">
+            <string>SalesforceSans-Regular</string>
+            <string>SalesforceSans-Regular</string>
+            <string>SalesforceSans-Regular</string>
+            <string>SalesforceSans-Regular</string>
+            <string>SalesforceSans-Regular</string>
+            <string>SalesforceSans-Regular</string>
+        </mutableArray>
+        <mutableArray key="SalesforceSans-Thin.ttf">
+            <string>SalesforceSans-Thin</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--ApprovalsHome-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="ApprovalsHome" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SalesforceWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button alignment="center" verticalAlignment="center" title="?" backgroundImage="ring-0degrees" id="Amg-66-8wy">
+                            <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="150"/>
+                            <connections>
+                                <action selector="pendingApprovalsTapped" destination="AgC-eL-Hgc" id="upp-LT-AIj"/>
+                                <segue destination="pMU-VS-2ga" kind="push" identifier="showApprovals" id="A2S-W2-aR6"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="pendingApprovalsButton" destination="Amg-66-8wy" id="10o-jT-yzQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="119" y="110"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="yXg-kp-2ra">
+            <objects>
+                <glanceController id="Xor-ry-Wed" customClass="GlanceController" customModule="SalesforceWatch_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" id="Z7n-CG-ZL6">
+                            <items>
+                                <label height="26" alignment="left" textAlignment="center" id="wVa-h3-2Jc">
+                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                </label>
+                                <label alignment="right" text="Approvals" id="Cyr-Tn-EJS">
+                                    <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="16"/>
+                                    <variation key="device=watch38mm" minimumScaleFactor="0.60000000000000009"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" id="TqD-14-lYS">
+                            <items>
+                                <imageView width="110" height="110" alignment="center" verticalAlignment="center" id="rWA-HP-fdJ" userLabel="CounterRing">
+                                    <variation key="device=watch38mm" height="80" width="80"/>
+                                </imageView>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="counterRing" destination="rWA-HP-fdJ" id="Hih-9g-kmi"/>
+                        <outlet property="titleLabel" destination="wVa-h3-2Jc" id="UPZ-V8-Xd6"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="119" y="437"/>
+        </scene>
+        <!--ApprovalsList-->
+        <scene sceneID="GCv-1y-TH3">
+            <objects>
+                <controller identifier="ApprovalsList" id="pMU-VS-2ga" customClass="ApprovalsInterfaceController" customModule="SalesforceWatch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="84r-ea-9RI">
+                            <items>
+                                <tableRow identifier="ApprovalRows" id="3fS-2b-XEP" customClass="ApprovalDetailsRowController" customModule="SalesforceWatch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="aOJ-0T-0HB">
+                                        <items>
+                                            <imageView width="20" height="20" alignment="left" verticalAlignment="center" id="2TR-5h-Xzi"/>
+                                            <label width="100" height="30" alignment="left" verticalAlignment="center" text="comment" textAlignment="left" id="GlT-2O-ed7">
+                                                <fontDescription key="font" name="SalesforceSans-Thin" family="Salesforce Sans" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="U9H-nh-57k" kind="modal" id="ayt-jj-7sM"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="detailLabel" destination="GlT-2O-ed7" id="gdR-TK-Os5"/>
+                                        <outlet property="image" destination="2TR-5h-Xzi" id="KaJ-hJ-a6T"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="kbW-Tn-Tl1">
+                        <items>
+                            <menuItem title="Approve" icon="accept" id="lL8-QR-i3V" userLabel="Approve"/>
+                            <menuItem title="Reject" icon="decline" id="70F-Sz-fPe" userLabel="Reject"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="resultsTable" destination="84r-ea-9RI" id="Wjr-ss-S2r"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="604"/>
+        </scene>
+        <!--Approvals Detail Controller-->
+        <scene sceneID="x5s-Pk-e04">
+            <objects>
+                <controller id="U9H-nh-57k" customClass="ApprovalsDetailController" customModule="SalesforceWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="Mxo-Zy-fmN">
+                            <items>
+                                <label alignment="center" text="OptyName" id="ZSg-ss-shH">
+                                    <color key="textColor" red="0.62769931550000002" green="0.79652881620000004" blue="0.92839163540000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="center" text="OptyAmount" id="fvd-Wy-Qf8">
+                            <color key="textColor" red="0.62769931550000002" green="0.79652881620000004" blue="0.92839163540000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="14"/>
+                        </label>
+                        <group width="1" height="56" alignment="center" verticalAlignment="center" id="znK-Xd-luF">
+                            <items>
+                                <button width="1" alignment="left" title="Reject" id="sJ2-3N-tGQ">
+                                    <color key="backgroundColor" red="0.70016571969696972" green="0.10229449089289411" blue="0.12313816825308935" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="16"/>
+                                    <connections>
+                                        <action selector="rejectTapped" destination="U9H-nh-57k" id="3E0-FX-UXg"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Approve" id="yZ5-WR-5zo">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.54892676767676774" blue="0.0031403083422378545" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="16"/>
+                            <connections>
+                                <action selector="approveTapped" destination="U9H-nh-57k" id="ILu-Ug-v3f"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="approveButton" destination="yZ5-WR-5zo" id="6rd-fV-b17"/>
+                        <outlet property="optyAmount" destination="fvd-Wy-Qf8" id="zSx-ks-qK2"/>
+                        <outlet property="optyName" destination="ZSg-ss-shH" id="LQR-E7-5gt"/>
+                        <outlet property="rejectButton" destination="sJ2-3N-tGQ" id="Gju-UT-XQl"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="603" y="274"/>
+        </scene>
+    </scenes>
+</document>
