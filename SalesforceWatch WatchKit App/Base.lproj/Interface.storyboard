@@ -1,161 +1,179 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jGj-f2-m08">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="SalesforceSans-Regular.ttf">
-            <string>SalesforceSans-Regular</string>
-            <string>SalesforceSans-Regular</string>
-            <string>SalesforceSans-Regular</string>
-            <string>SalesforceSans-Regular</string>
-            <string>SalesforceSans-Regular</string>
-            <string>SalesforceSans-Regular</string>
-        </mutableArray>
-        <mutableArray key="SalesforceSans-Thin.ttf">
-            <string>SalesforceSans-Thin</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
-        <!--ApprovalsHome-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Customers-->
+        <scene sceneID="cvC-rm-6me">
             <objects>
-                <controller identifier="ApprovalsHome" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SalesforceWatch_WatchKit_App" customModuleProvider="target">
+                <controller identifier="LeadList" title="Customers" id="jGj-f2-m08" customClass="LeadListInterfaceController" customModule="LightningRealtor_WatchKit_Extension">
                     <items>
-                        <button alignment="center" verticalAlignment="center" title="?" backgroundImage="ring-0degrees" id="Amg-66-8wy">
-                            <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="150"/>
-                            <connections>
-                                <action selector="pendingApprovalsTapped" destination="AgC-eL-Hgc" id="upp-LT-AIj"/>
-                                <segue destination="pMU-VS-2ga" kind="push" identifier="showApprovals" id="A2S-W2-aR6"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="pendingApprovalsButton" destination="Amg-66-8wy" id="10o-jT-yzQ"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="119" y="110"/>
-        </scene>
-        <!--Glance Interface Controller-->
-        <scene sceneID="yXg-kp-2ra">
-            <objects>
-                <glanceController id="Xor-ry-Wed" customClass="GlanceController" customModule="SalesforceWatch_WatchKit_Extension">
-                    <items>
-                        <group alignment="left" id="Z7n-CG-ZL6">
+                        <table alignment="left" id="29H-jg-E30">
                             <items>
-                                <label height="26" alignment="left" textAlignment="center" id="wVa-h3-2Jc">
-                                    <fontDescription key="font" type="system" pointSize="20"/>
-                                </label>
-                                <label alignment="right" text="Approvals" id="Cyr-Tn-EJS">
-                                    <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="16"/>
-                                    <variation key="device=watch38mm" minimumScaleFactor="0.60000000000000009"/>
-                                </label>
-                            </items>
-                        </group>
-                        <group alignment="left" id="TqD-14-lYS">
-                            <items>
-                                <imageView width="110" height="110" alignment="center" verticalAlignment="center" id="rWA-HP-fdJ" userLabel="CounterRing">
-                                    <variation key="device=watch38mm" height="80" width="80"/>
-                                </imageView>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="counterRing" destination="rWA-HP-fdJ" id="Hih-9g-kmi"/>
-                        <outlet property="titleLabel" destination="wVa-h3-2Jc" id="UPZ-V8-Xd6"/>
-                    </connections>
-                </glanceController>
-            </objects>
-            <point key="canvasLocation" x="119" y="437"/>
-        </scene>
-        <!--ApprovalsList-->
-        <scene sceneID="GCv-1y-TH3">
-            <objects>
-                <controller identifier="ApprovalsList" id="pMU-VS-2ga" customClass="ApprovalsInterfaceController" customModule="SalesforceWatch_WatchKit_Extension">
-                    <items>
-                        <table alignment="left" id="84r-ea-9RI">
-                            <items>
-                                <tableRow identifier="ApprovalRows" id="3fS-2b-XEP" customClass="ApprovalDetailsRowController" customModule="SalesforceWatch_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="aOJ-0T-0HB">
+                                <tableRow identifier="LeadRows" id="5c8-QQ-SJr" customClass="LeadDetailsRowController" customModule="LightningRealtor_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="N6I-m6-lD3">
                                         <items>
-                                            <imageView width="20" height="20" alignment="left" verticalAlignment="center" id="2TR-5h-Xzi"/>
-                                            <label width="100" height="30" alignment="left" verticalAlignment="center" text="comment" textAlignment="left" id="GlT-2O-ed7">
-                                                <fontDescription key="font" name="SalesforceSans-Thin" family="Salesforce Sans" pointSize="12"/>
-                                            </label>
+                                            <group width="30" height="30" alignment="left" verticalAlignment="center" animationDuration="2" radius="15" id="qTc-Pd-IVb">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" verticalAlignment="center" animationDuration="1" id="ig4-AW-Snv"/>
+                                                </items>
+                                            </group>
+                                            <label width="0.80000000000000004" height="30" alignment="left" verticalAlignment="center" text="Customer" textAlignment="left" id="4Jd-me-w3b"/>
                                         </items>
-                                        <connections>
-                                            <segue destination="U9H-nh-57k" kind="modal" id="ayt-jj-7sM"/>
-                                        </connections>
                                     </group>
                                     <connections>
-                                        <outlet property="detailLabel" destination="GlT-2O-ed7" id="gdR-TK-Os5"/>
-                                        <outlet property="image" destination="2TR-5h-Xzi" id="KaJ-hJ-a6T"/>
+                                        <outlet property="image" destination="ig4-AW-Snv" id="eYx-uv-5Eq"/>
+                                        <outlet property="imageGroup" destination="qTc-Pd-IVb" id="YlA-uR-qRr"/>
+                                        <outlet property="nameLabel" destination="4Jd-me-w3b" id="hUh-SP-SmW"/>
+                                        <segue destination="G8k-pL-08P" kind="modal" identifier="preapprovals" id="jJu-lL-Ubj"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
-                    <menu key="menu" id="kbW-Tn-Tl1">
-                        <items>
-                            <menuItem title="Approve" icon="accept" id="lL8-QR-i3V" userLabel="Approve"/>
-                            <menuItem title="Reject" icon="decline" id="70F-Sz-fPe" userLabel="Reject"/>
-                        </items>
-                    </menu>
                     <connections>
-                        <outlet property="resultsTable" destination="84r-ea-9RI" id="Wjr-ss-S2r"/>
+                        <outlet property="resultsTable" destination="29H-jg-E30" id="mgr-3C-LAF"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="363" y="604"/>
+            <point key="canvasLocation" x="46" y="-37"/>
         </scene>
-        <!--Approvals Detail Controller-->
-        <scene sceneID="x5s-Pk-e04">
+        <!--PreApprovals-->
+        <scene sceneID="6YK-P6-IUw">
             <objects>
-                <controller id="U9H-nh-57k" customClass="ApprovalsDetailController" customModule="SalesforceWatch_WatchKit_Extension">
+                <controller identifier="preapprovals" title="PreApprovals" id="G8k-pL-08P" customClass="PreApprovalsListInterfaceController" customModule="LightningRealtor_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="Mxo-Zy-fmN">
+                        <group width="1" alignment="left" layout="vertical" id="CjX-vM-8Ku" userLabel="HeaderGroup">
                             <items>
-                                <label alignment="center" text="OptyName" id="ZSg-ss-shH">
-                                    <color key="textColor" red="0.62769931550000002" green="0.79652881620000004" blue="0.92839163540000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="14"/>
-                                </label>
+                                <group width="1" alignment="left" id="Qwd-En-1vl">
+                                    <items>
+                                        <group width="40" height="40" alignment="center" verticalAlignment="center" radius="20" id="fXc-J6-19o" userLabel="RounderGroup">
+                                            <items>
+                                                <imageView width="40" height="40" alignment="center" verticalAlignment="center" id="uhe-11-ggv" userLabel="PropertyImage"/>
+                                            </items>
+                                        </group>
+                                        <button width="25" height="25" alignment="center" verticalAlignment="bottom" backgroundImage="newpre" id="fBj-ja-zNO">
+                                            <connections>
+                                                <action selector="newPreApprovalTapped" destination="G8k-pL-08P" id="HCh-O1-cko"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="rzb-sq-kBy">
+                                    <items>
+                                        <label width="1" height="30" alignment="left" text="Customer" textAlignment="center" id="W1h-7C-8py">
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <label alignment="center" text="OptyAmount" id="fvd-Wy-Qf8">
-                            <color key="textColor" red="0.62769931550000002" green="0.79652881620000004" blue="0.92839163540000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="14"/>
-                        </label>
-                        <group width="1" height="56" alignment="center" verticalAlignment="center" id="znK-Xd-luF">
+                        <table alignment="left" id="0eg-Bl-2Ls">
                             <items>
-                                <button width="1" alignment="left" title="Reject" id="sJ2-3N-tGQ">
-                                    <color key="backgroundColor" red="0.70016571969696972" green="0.10229449089289411" blue="0.12313816825308935" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="16"/>
+                                <tableRow identifier="PreApprovals" id="TJc-Qa-cpo" customClass="PreApprovalRowController" customModule="LightningRealtor_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="b9O-UM-Mqg">
+                                        <items>
+                                            <group width="30" height="30" alignment="left" verticalAlignment="center" animationDuration="2" radius="15" id="EQX-qt-d3s">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" verticalAlignment="center" image="heart-icon" animationDuration="1" id="Df3-V6-Qiv"/>
+                                                </items>
+                                            </group>
+                                            <label width="0.80000000000000004" height="30" alignment="left" verticalAlignment="center" text="status" textAlignment="center" id="aad-gT-gzE" userLabel="status"/>
+                                        </items>
+                                    </group>
                                     <connections>
-                                        <action selector="rejectTapped" destination="U9H-nh-57k" id="3E0-FX-UXg"/>
+                                        <outlet property="status" destination="aad-gT-gzE" id="dWv-Ux-NzT"/>
+                                        <segue destination="LyC-Tt-b9I" kind="modal" identifier="details" id="FRy-WX-FwW"/>
                                     </connections>
-                                </button>
+                                </tableRow>
                             </items>
-                        </group>
-                        <button width="1" alignment="left" title="Approve" id="yZ5-WR-5zo">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" red="0.0" green="0.54892676767676774" blue="0.0031403083422378545" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" name="SalesforceSans-Regular" family="Salesforce Sans" pointSize="16"/>
-                            <connections>
-                                <action selector="approveTapped" destination="U9H-nh-57k" id="ILu-Ug-v3f"/>
-                            </connections>
-                        </button>
+                        </table>
                     </items>
                     <connections>
-                        <outlet property="approveButton" destination="yZ5-WR-5zo" id="6rd-fV-b17"/>
-                        <outlet property="optyAmount" destination="fvd-Wy-Qf8" id="zSx-ks-qK2"/>
-                        <outlet property="optyName" destination="ZSg-ss-shH" id="LQR-E7-5gt"/>
-                        <outlet property="rejectButton" destination="sJ2-3N-tGQ" id="Gju-UT-XQl"/>
+                        <outlet property="customerName" destination="W1h-7C-8py" id="ota-n3-61p"/>
+                        <outlet property="headerImage" destination="uhe-11-ggv" id="uxy-xR-aME"/>
+                        <outlet property="newPreApprovalButton" destination="fBj-ja-zNO" id="2IA-JB-TNf"/>
+                        <outlet property="resultsTable" destination="0eg-Bl-2Ls" id="6Eb-Sy-Hg3"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="274"/>
+            <point key="canvasLocation" x="328" y="-37"/>
+        </scene>
+        <!--PA Details-->
+        <scene sceneID="fkX-UV-5vf">
+            <objects>
+                <controller identifier="PADetails" title="PA Details" id="LyC-Tt-b9I" customClass="PreApprovalDetailsController" customModule="LightningRealtor_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="HDu-VP-mGQ">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="aJl-xD-vY7" userLabel="HeaderGroup">
+                                    <items>
+                                        <group width="40" height="40" alignment="center" radius="20" id="5iN-N6-iyl" userLabel="RounderGroup">
+                                            <items>
+                                                <imageView width="40" height="40" alignment="left" verticalAlignment="center" id="TAs-d3-QFj" userLabel="PropertyImage"/>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" layout="vertical" id="PAv-mQ-OBd">
+                                            <items>
+                                                <label width="1" height="30" alignment="left" text="Customer" textAlignment="center" id="DeE-Ph-1Lx">
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="Lby-wt-YZc" userLabel="Status-Group">
+                                    <items>
+                                        <separator alignment="left" id="c2W-0P-IXs"/>
+                                        <label width="1" height="30" alignment="left" text="Status" textAlignment="center" minimumScaleFactor="0.90000000000000002" id="LFm-ga-hbc">
+                                            <color key="textColor" red="0.42352941179999998" green="0.6588235294" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="16"/>
+                                        </label>
+                                        <label width="1" height="30" alignment="center" verticalAlignment="bottom" text="APPROVED" textAlignment="center" id="Jgh-eA-kge">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="CLn-rB-tzs" userLabel="CreditScore-Group">
+                                    <items>
+                                        <separator alignment="left" id="V4i-tv-yBS"/>
+                                        <label width="1" height="30" alignment="left" text=" Credit score" textAlignment="center" minimumScaleFactor="0.90000000000000002" id="6LT-ko-B4K">
+                                            <color key="textColor" red="0.42352941179999998" green="0.6588235294" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="16"/>
+                                        </label>
+                                        <label width="1" height="30" alignment="center" verticalAlignment="bottom" text="800" textAlignment="center" id="bWt-rP-K6D">
+                                            <fontDescription key="font" type="system" pointSize="24"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="hsj-DF-arE" userLabel="Min-Group">
+                            <items>
+                                <separator alignment="left" id="qvq-ji-k5q"/>
+                                <label width="1" height="30" alignment="left" text="Min Required" textAlignment="center" minimumScaleFactor="0.90000000000000002" id="2PY-Rb-U1O">
+                                    <color key="textColor" red="0.42352941179999998" green="0.6588235294" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="thin" pointSize="16"/>
+                                </label>
+                                <label width="1" height="30" alignment="center" text="800" textAlignment="center" id="kTb-x0-cYd">
+                                    <fontDescription key="font" type="system" pointSize="24"/>
+                                </label>
+                                <label width="1" height="10" alignment="left" id="YIT-dq-OTE" userLabel="Spacer"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="approvalStatus" destination="Jgh-eA-kge" id="tuG-zc-54P"/>
+                        <outlet property="creditScore" destination="bWt-rP-K6D" id="4z0-WQ-fAQ"/>
+                        <outlet property="customerName" destination="DeE-Ph-1Lx" id="IF9-9e-4NF"/>
+                        <outlet property="financeMinCreditScore" destination="kTb-x0-cYd" id="J68-cl-8lU"/>
+                        <outlet property="propertyImage" destination="TAs-d3-QFj" id="ypI-5G-ARJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="589" y="-28"/>
         </scene>
     </scenes>
 </document>

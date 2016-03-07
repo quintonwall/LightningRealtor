@@ -13,6 +13,8 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var h:LeadsHandler = LeadsHandler()
+        //h.getPropertyLeads()
         //var a:ApprovalsHandler = ApprovalsHandler()
         //a.testApproval()
        

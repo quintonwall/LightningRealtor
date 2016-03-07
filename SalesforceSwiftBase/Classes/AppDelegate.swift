@@ -16,7 +16,7 @@ import WatchKit
 let RemoteAccessConsumerKey = "3MVG9fMtCkV6eLhdjZ8TO0bd8hGzu5J5yQgUxxSuCecbgoXyi.K29XllYaR_X0S5uGpH_kLhPbR2bMOys1U2D";
 let OAuthRedirectURI        = "mobilesdk://success";
 let scopes = ["api"];
-let approvalsHelper: ApprovalsHandler = ApprovalsHandler()
+let leadsHandler: LeadsHandler = LeadsHandler()
 
 
 @UIApplicationMain
@@ -66,11 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         super.init()
         
-        
-        //let appGroupID = "group.com.gyspycode.SFTasks"
-        //let defaults = NSUserDefaults(suiteName: appGroupID)
-        
-        
         SFLogger.setLogLevel(SFLogLevel.Debug)
         
         
@@ -102,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        approvalsHelper.register()
+        leadsHandler.register()
     }
     
     

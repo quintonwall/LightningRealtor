@@ -1,0 +1,943 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EDF3CAF1951C3FB00841D1C /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDF3CAE1951C3FB00841D1C /* RootVC.swift */; };
+		4F7484BF18DD1324006E7D50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7484BE18DD1324006E7D50 /* Images.xcassets */; };
+		824A9DE31724E16400C9BD79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 824A9DE11724E16400C9BD79 /* InfoPlist.strings */; };
+		824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E3E1724EC6300C9BD79 /* Settings.bundle */; };
+		824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 824A9E401724ECC600C9BD79 /* SalesforceSDKResources.bundle */; };
+		B23AD40C5D9C80268C39B547 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A277B472B8CF03E55A3471 /* Pods.framework */; };
+		E70281F31C8BB6DD0073F003 /* PreApprovalDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70281F11C8BAA6A0073F003 /* PreApprovalDetailsController.swift */; };
+		E70281F71C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70281F61C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift */; };
+		E70281F91C8DE5860073F003 /* Lead.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70281F81C8DE5860073F003 /* Lead.swift */; };
+		E70281FA1C8DE7A00073F003 /* Lead.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70281F81C8DE5860073F003 /* Lead.swift */; };
+		E70281FB1C8DEAEC0073F003 /* PreApprovalsListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70281F61C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift */; };
+		E70281FD1C8DEB390073F003 /* PreApprovalRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70281FC1C8DEB390073F003 /* PreApprovalRowController.swift */; };
+		E70281FE1C8DEB390073F003 /* PreApprovalRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70281FC1C8DEB390073F003 /* PreApprovalRowController.swift */; };
+		E70282001C8DF13B0073F003 /* SalesforceObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7F5AF1A6738D2003CFD1C /* SalesforceObjectType.swift */; };
+		E70B0DEB1AA7C2F7006E8CDE /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B0DEA1AA7C2F7006E8CDE /* GlanceController.swift */; };
+		E725F9A81A5B45A200D6203C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E725F9A71A5B45A200D6203C /* Main.storyboard */; };
+		E72678381C35BE970022C2E1 /* LightningRealtor WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E725F9D11A5C8A4A00D6203C /* LightningRealtor WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E726783B1C35BE970022C2E1 /* LightningRealtor WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E725F9DB1A5C8A4A00D6203C /* LightningRealtor WatchKit App.app */; };
+		E72678411C35C0300022C2E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72678401C35C0300022C2E1 /* AppDelegate.swift */; };
+		E72A902C1C8B65A10055596A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72A902B1C8B65A10055596A /* Launch Screen.storyboard */; };
+		E79F3A0E1C4EDFBB00B484A2 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79F3A0D1C4EDFBB00B484A2 /* HomeTableViewController.swift */; };
+		E7EFDD811A684CC80022AB99 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFDD801A684CC80022AB99 /* Interface.storyboard */; };
+		E7F17F181C8797D100136C58 /* LeadsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F17F171C8797D100136C58 /* LeadsHandler.swift */; };
+		E7F17F1A1C88E1A500136C58 /* LeadListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F17F191C88E1A500136C58 /* LeadListInterfaceController.swift */; };
+		E7F17F1C1C88E29D00136C58 /* LeadDetailsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F17F1B1C88E29D00136C58 /* LeadDetailsRowController.swift */; };
+		E7F7F5A31A65C6E4003CFD1C /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F7F5A21A65C6E4003CFD1C /* images.xcassets */; };
+		E7F7F5A51A65C849003CFD1C /* Chevron.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7F5A41A65C849003CFD1C /* Chevron.swift */; };
+		E7F7F5B01A6738D2003CFD1C /* SalesforceObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7F5AF1A6738D2003CFD1C /* SalesforceObjectType.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E72678361C35BE970022C2E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 824A9DCD1724E16400C9BD79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E725F9D01A5C8A4A00D6203C;
+			remoteInfo = "SalesforceWatch WatchKit Extension";
+		};
+		E72678391C35BE970022C2E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 824A9DCD1724E16400C9BD79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E725F9DA1A5C8A4A00D6203C;
+			remoteInfo = "SalesforceWatch WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E726783C1C35BE970022C2E1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E72678381C35BE970022C2E1 /* LightningRealtor WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E726783D1C35BE970022C2E1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E726783B1C35BE970022C2E1 /* LightningRealtor WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2EDF3CAD1951C3FA00841D1C /* SalesforceSwiftBase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SalesforceSwiftBase-Bridging-Header.h"; sourceTree = "<group>"; };
+		2EDF3CAE1951C3FB00841D1C /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		4F3F413417E7CA5C008B3283 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		4F7484BE18DD1324006E7D50 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		58A277B472B8CF03E55A3471 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		824A9DD51724E16400C9BD79 /* SalesforceWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalesforceWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		824A9DD81724E16400C9BD79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		824A9DDA1724E16400C9BD79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		824A9DDC1724E16400C9BD79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		824A9DE01724E16400C9BD79 /* SalesforceWatch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalesforceWatch-Info.plist"; sourceTree = "<group>"; };
+		824A9DE21724E16400C9BD79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		824A9DE61724E16400C9BD79 /* SalesforceWatch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SalesforceWatch-Prefix.pch"; sourceTree = "<group>"; };
+		824A9E3E1724EC6300C9BD79 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		824A9E401724ECC600C9BD79 /* SalesforceSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SalesforceSDKResources.bundle; sourceTree = "<group>"; };
+		824A9FE71725098F00C9BD79 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		824A9FE91725099600C9BD79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		824A9FEB17250ADA00C9BD79 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		824A9FED17250AE500C9BD79 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		824A9FEF17250B7C00C9BD79 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		824A9FF117250B8300C9BD79 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		824A9FF317250BF300C9BD79 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		824A9FF517250BFA00C9BD79 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		824A9FF717250C0100C9BD79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E70281F11C8BAA6A0073F003 /* PreApprovalDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreApprovalDetailsController.swift; sourceTree = "<group>"; };
+		E70281F61C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreApprovalsListInterfaceController.swift; sourceTree = "<group>"; };
+		E70281F81C8DE5860073F003 /* Lead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lead.swift; sourceTree = "<group>"; };
+		E70281FC1C8DEB390073F003 /* PreApprovalRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreApprovalRowController.swift; sourceTree = "<group>"; };
+		E70B0DEA1AA7C2F7006E8CDE /* GlanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		E71A65DA1A5DD4E800179F5E /* SalesforceWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SalesforceWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E71AF9471B9A6B5B0025E62F /* SalesforceSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-Bold.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-Bold.ttf"; sourceTree = "<group>"; };
+		E71AF9481B9A6B5B0025E62F /* SalesforceSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-BoldItalic.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E71AF9491B9A6B5B0025E62F /* SalesforceSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-Italic.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-Italic.ttf"; sourceTree = "<group>"; };
+		E71AF94A1B9A6B5B0025E62F /* SalesforceSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-Light.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-Light.ttf"; sourceTree = "<group>"; };
+		E71AF94B1B9A6B5B0025E62F /* SalesforceSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-LightItalic.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		E71AF94C1B9A6B5B0025E62F /* SalesforceSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-Regular.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-Regular.ttf"; sourceTree = "<group>"; };
+		E71AF94D1B9A6B5B0025E62F /* SalesforceSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-Thin.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-Thin.ttf"; sourceTree = "<group>"; };
+		E71AF94E1B9A6B5B0025E62F /* SalesforceSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SalesforceSans-ThinItalic.ttf"; path = "../../../../Technical Product Management/fonts/SalesforceSans/SalesforceSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		E725F9A71A5B45A200D6203C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E725F9D11A5C8A4A00D6203C /* LightningRealtor WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LightningRealtor WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E725F9D41A5C8A4A00D6203C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E725F9DB1A5C8A4A00D6203C /* LightningRealtor WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LightningRealtor WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E725F9E11A5C8A4A00D6203C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E725F9F11A5C8E7800D6203C /* SalesforceWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SalesforceWatch.entitlements; sourceTree = SOURCE_ROOT; };
+		E72678401C35C0300022C2E1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E72A902B1C8B65A10055596A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E7384EAB1C4DB7B90029D724 /* SalesforceMobileSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceMobileSDK_iOS.framework; path = "Pods/../build/Debug-iphoneos/SalesforceMobileSDK_iOS.framework"; sourceTree = "<group>"; };
+		E7384EAD1C4DB7FA0029D724 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "Pods/../build/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
+		E7384EB01C4DBB3E0029D724 /* SalesforceMobileSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceMobileSDK_iOS.framework; path = "Pods/../build/Debug-iphoneos/SalesforceMobileSDK_iOS.framework"; sourceTree = "<group>"; };
+		E79F3A031C4EAB4F00B484A2 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "Pods/../build/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
+		E79F3A041C4EAB4F00B484A2 /* SalesforceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceNetwork.framework; path = "Pods/../build/Debug-iphoneos/SalesforceNetwork.framework"; sourceTree = "<group>"; };
+		E79F3A051C4EAB4F00B484A2 /* SalesforceRestAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceRestAPI.framework; path = "Pods/../build/Debug-iphoneos/SalesforceRestAPI.framework"; sourceTree = "<group>"; };
+		E79F3A061C4EAB4F00B484A2 /* SalesforceSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceSDKCore.framework; path = "Pods/../build/Debug-iphoneos/SalesforceSDKCore.framework"; sourceTree = "<group>"; };
+		E79F3A0D1C4EDFBB00B484A2 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		E7E76D761C4DC2D200BF46C9 /* SalesforceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceNetwork.framework; path = "Pods/../build/Debug-iphoneos/SalesforceNetwork.framework"; sourceTree = "<group>"; };
+		E7E76D771C4DC2D200BF46C9 /* SalesforceRestAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceRestAPI.framework; path = "Pods/../build/Debug-iphoneos/SalesforceRestAPI.framework"; sourceTree = "<group>"; };
+		E7E76D781C4DC2D200BF46C9 /* SalesforceSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceSDKCore.framework; path = "Pods/../build/Debug-iphoneos/SalesforceSDKCore.framework"; sourceTree = "<group>"; };
+		E7EFDD801A684CC80022AB99 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Interface.storyboard; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E7F17F171C8797D100136C58 /* LeadsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadsHandler.swift; sourceTree = "<group>"; };
+		E7F17F191C88E1A500136C58 /* LeadListInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadListInterfaceController.swift; sourceTree = "<group>"; };
+		E7F17F1B1C88E29D00136C58 /* LeadDetailsRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadDetailsRowController.swift; sourceTree = "<group>"; };
+		E7F7F5A21A65C6E4003CFD1C /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		E7F7F5A41A65C849003CFD1C /* Chevron.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chevron.swift; sourceTree = "<group>"; };
+		E7F7F5AF1A6738D2003CFD1C /* SalesforceObjectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesforceObjectType.swift; sourceTree = "<group>"; };
+		EA1D8E74980285507883E8D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F7EC0B941BAA0A5BA6D0809A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C6DC1CC99CB74ED9DE69E23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		824A9DD21724E16400C9BD79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B23AD40C5D9C80268C39B547 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E725F9CE1A5C8A4A00D6203C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		824A9DCC1724E16400C9BD79 = {
+			isa = PBXGroup;
+			children = (
+				824A9DDE1724E16400C9BD79 /* SalesforceWatch */,
+				E725F9D21A5C8A4A00D6203C /* SalesforceWatch WatchKit Extension */,
+				E725F9DF1A5C8A4A00D6203C /* SalesforceWatch WatchKit App */,
+				824A9DD71724E16400C9BD79 /* Frameworks */,
+				824A9DD61724E16400C9BD79 /* Products */,
+				FBE49674C13A2F24224B0FB1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		824A9DD61724E16400C9BD79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				824A9DD51724E16400C9BD79 /* SalesforceWatch.app */,
+				E725F9D11A5C8A4A00D6203C /* LightningRealtor WatchKit Extension.appex */,
+				E725F9DB1A5C8A4A00D6203C /* LightningRealtor WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		824A9DD71724E16400C9BD79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E79F3A031C4EAB4F00B484A2 /* CocoaLumberjack.framework */,
+				E79F3A041C4EAB4F00B484A2 /* SalesforceNetwork.framework */,
+				E79F3A051C4EAB4F00B484A2 /* SalesforceRestAPI.framework */,
+				E79F3A061C4EAB4F00B484A2 /* SalesforceSDKCore.framework */,
+				E7E76D761C4DC2D200BF46C9 /* SalesforceNetwork.framework */,
+				E7E76D771C4DC2D200BF46C9 /* SalesforceRestAPI.framework */,
+				E7E76D781C4DC2D200BF46C9 /* SalesforceSDKCore.framework */,
+				E7384EB01C4DBB3E0029D724 /* SalesforceMobileSDK_iOS.framework */,
+				E7384EAD1C4DB7FA0029D724 /* CocoaLumberjack.framework */,
+				E7384EAB1C4DB7B90029D724 /* SalesforceMobileSDK_iOS.framework */,
+				824A9FE71725098F00C9BD79 /* libxml2.dylib */,
+				824A9FE91725099600C9BD79 /* libz.dylib */,
+				824A9FEB17250ADA00C9BD79 /* CFNetwork.framework */,
+				824A9FED17250AE500C9BD79 /* CoreData.framework */,
+				824A9DDC1724E16400C9BD79 /* CoreGraphics.framework */,
+				824A9DDA1724E16400C9BD79 /* Foundation.framework */,
+				4F3F413417E7CA5C008B3283 /* ImageIO.framework */,
+				824A9FEF17250B7C00C9BD79 /* MessageUI.framework */,
+				824A9FF117250B8300C9BD79 /* MobileCoreServices.framework */,
+				824A9FF317250BF300C9BD79 /* QuartzCore.framework */,
+				824A9FF517250BFA00C9BD79 /* Security.framework */,
+				824A9FF717250C0100C9BD79 /* SystemConfiguration.framework */,
+				824A9DD81724E16400C9BD79 /* UIKit.framework */,
+				58A277B472B8CF03E55A3471 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		824A9DDE1724E16400C9BD79 /* SalesforceWatch */ = {
+			isa = PBXGroup;
+			children = (
+				E725F9F11A5C8E7800D6203C /* SalesforceWatch.entitlements */,
+				824A9E301724E2A900C9BD79 /* Classes */,
+				824A9F301725079000C9BD79 /* Dependencies */,
+				824A9E421724EF9800C9BD79 /* Resources */,
+				824A9DDF1724E16400C9BD79 /* Supporting Files */,
+				E725F9A71A5B45A200D6203C /* Main.storyboard */,
+				E72A902B1C8B65A10055596A /* Launch Screen.storyboard */,
+			);
+			name = SalesforceWatch;
+			path = SalesforceSwiftBase;
+			sourceTree = "<group>";
+		};
+		824A9DDF1724E16400C9BD79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				824A9DE01724E16400C9BD79 /* SalesforceWatch-Info.plist */,
+				824A9DE11724E16400C9BD79 /* InfoPlist.strings */,
+				824A9DE61724E16400C9BD79 /* SalesforceWatch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		824A9E301724E2A900C9BD79 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E71F94481A65953100FE7769 /* Handlers */,
+				2EDF3CAE1951C3FB00841D1C /* RootVC.swift */,
+				2EDF3CAD1951C3FA00841D1C /* SalesforceSwiftBase-Bridging-Header.h */,
+				E72678401C35C0300022C2E1 /* AppDelegate.swift */,
+				E79F3A0D1C4EDFBB00B484A2 /* HomeTableViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		824A9E421724EF9800C9BD79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E71AF9471B9A6B5B0025E62F /* SalesforceSans-Bold.ttf */,
+				E71AF9481B9A6B5B0025E62F /* SalesforceSans-BoldItalic.ttf */,
+				E71AF9491B9A6B5B0025E62F /* SalesforceSans-Italic.ttf */,
+				E71AF94A1B9A6B5B0025E62F /* SalesforceSans-Light.ttf */,
+				E71AF94B1B9A6B5B0025E62F /* SalesforceSans-LightItalic.ttf */,
+				E71AF94C1B9A6B5B0025E62F /* SalesforceSans-Regular.ttf */,
+				E71AF94D1B9A6B5B0025E62F /* SalesforceSans-Thin.ttf */,
+				E71AF94E1B9A6B5B0025E62F /* SalesforceSans-ThinItalic.ttf */,
+				4F7484BE18DD1324006E7D50 /* Images.xcassets */,
+				824A9E401724ECC600C9BD79 /* SalesforceSDKResources.bundle */,
+				824A9E3E1724EC6300C9BD79 /* Settings.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		824A9F301725079000C9BD79 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		E71F94481A65953100FE7769 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				E7F17F171C8797D100136C58 /* LeadsHandler.swift */,
+			);
+			name = Handlers;
+			sourceTree = "<group>";
+		};
+		E725F9D21A5C8A4A00D6203C /* SalesforceWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E7F7F5AA1A66E055003CFD1C /* Helpers */,
+				E7F7F5A91A66E04A003CFD1C /* Glances */,
+				E7F7F5A81A66E032003CFD1C /* Interfaces */,
+				E71A65DA1A5DD4E800179F5E /* SalesforceWatch WatchKit Extension.entitlements */,
+				E725F9D31A5C8A4A00D6203C /* Supporting Files */,
+			);
+			path = "SalesforceWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E725F9D31A5C8A4A00D6203C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E725F9D41A5C8A4A00D6203C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E725F9DF1A5C8A4A00D6203C /* SalesforceWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				E7EFDD801A684CC80022AB99 /* Interface.storyboard */,
+				E7F7F5A21A65C6E4003CFD1C /* images.xcassets */,
+				E725F9E01A5C8A4A00D6203C /* Supporting Files */,
+			);
+			path = "SalesforceWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		E725F9E01A5C8A4A00D6203C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E725F9E11A5C8A4A00D6203C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7F7F5A81A66E032003CFD1C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				E7F17F191C88E1A500136C58 /* LeadListInterfaceController.swift */,
+				E7F17F1B1C88E29D00136C58 /* LeadDetailsRowController.swift */,
+				E70281F11C8BAA6A0073F003 /* PreApprovalDetailsController.swift */,
+				E70281F61C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift */,
+				E70281FC1C8DEB390073F003 /* PreApprovalRowController.swift */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		E7F7F5A91A66E04A003CFD1C /* Glances */ = {
+			isa = PBXGroup;
+			children = (
+				E70B0DEA1AA7C2F7006E8CDE /* GlanceController.swift */,
+			);
+			name = Glances;
+			sourceTree = "<group>";
+		};
+		E7F7F5AA1A66E055003CFD1C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E7F7F5A41A65C849003CFD1C /* Chevron.swift */,
+				E7F7F5AF1A6738D2003CFD1C /* SalesforceObjectType.swift */,
+				E70281F81C8DE5860073F003 /* Lead.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		FBE49674C13A2F24224B0FB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D8E74980285507883E8D0 /* Pods.debug.xcconfig */,
+				F7EC0B941BAA0A5BA6D0809A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		824A9DD41724E16400C9BD79 /* LightningRealtor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 824A9DFB1724E16400C9BD79 /* Build configuration list for PBXNativeTarget "LightningRealtor" */;
+			buildPhases = (
+				F4265CE69200BE37372C5E6F /* Check Pods Manifest.lock */,
+				824A9DD11724E16400C9BD79 /* Sources */,
+				824A9DD21724E16400C9BD79 /* Frameworks */,
+				824A9DD31724E16400C9BD79 /* Resources */,
+				E726783D1C35BE970022C2E1 /* Embed Watch Content */,
+				EA2236709CC1090E58921815 /* Embed Pods Frameworks */,
+				098DF6D79BF4C263CA42DB3E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E726783A1C35BE970022C2E1 /* PBXTargetDependency */,
+			);
+			name = LightningRealtor;
+			productName = SalesforceSwiftBase;
+			productReference = 824A9DD51724E16400C9BD79 /* SalesforceWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E725F9D01A5C8A4A00D6203C /* LightningRealtor WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E725F9ED1A5C8A4A00D6203C /* Build configuration list for PBXNativeTarget "LightningRealtor WatchKit Extension" */;
+			buildPhases = (
+				E725F9CD1A5C8A4A00D6203C /* Sources */,
+				E725F9CE1A5C8A4A00D6203C /* Frameworks */,
+				E725F9CF1A5C8A4A00D6203C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LightningRealtor WatchKit Extension";
+			productName = "SalesforceWatch WatchKit Extension";
+			productReference = E725F9D11A5C8A4A00D6203C /* LightningRealtor WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		E725F9DA1A5C8A4A00D6203C /* LightningRealtor WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E725F9EA1A5C8A4A00D6203C /* Build configuration list for PBXNativeTarget "LightningRealtor WatchKit App" */;
+			buildPhases = (
+				E725F9D91A5C8A4A00D6203C /* Resources */,
+				E726783C1C35BE970022C2E1 /* Embed App Extensions */,
+				0C6DC1CC99CB74ED9DE69E23 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E72678371C35BE970022C2E1 /* PBXTargetDependency */,
+			);
+			name = "LightningRealtor WatchKit App";
+			productName = "SalesforceWatch WatchKit App";
+			productReference = E725F9DB1A5C8A4A00D6203C /* LightningRealtor WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		824A9DCD1724E16400C9BD79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Salesforce, Inc";
+				TargetAttributes = {
+					824A9DD41724E16400C9BD79 = {
+						DevelopmentTeam = 4X564CR95Y;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					E725F9D01A5C8A4A00D6203C = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 4X564CR95Y;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					E725F9DA1A5C8A4A00D6203C = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 4X564CR95Y;
+					};
+				};
+			};
+			buildConfigurationList = 824A9DD01724E16400C9BD79 /* Build configuration list for PBXProject "LightningRealtor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 824A9DCC1724E16400C9BD79;
+			productRefGroup = 824A9DD61724E16400C9BD79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				824A9DD41724E16400C9BD79 /* LightningRealtor */,
+				E725F9D01A5C8A4A00D6203C /* LightningRealtor WatchKit Extension */,
+				E725F9DA1A5C8A4A00D6203C /* LightningRealtor WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		824A9DD31724E16400C9BD79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72A902C1C8B65A10055596A /* Launch Screen.storyboard in Resources */,
+				824A9DE31724E16400C9BD79 /* InfoPlist.strings in Resources */,
+				824A9E3F1724EC6300C9BD79 /* Settings.bundle in Resources */,
+				E725F9A81A5B45A200D6203C /* Main.storyboard in Resources */,
+				824A9E411724ECC600C9BD79 /* SalesforceSDKResources.bundle in Resources */,
+				4F7484BF18DD1324006E7D50 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E725F9CF1A5C8A4A00D6203C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E725F9D91A5C8A4A00D6203C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7EFDD811A684CC80022AB99 /* Interface.storyboard in Resources */,
+				E7F7F5A31A65C6E4003CFD1C /* images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		098DF6D79BF4C263CA42DB3E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA2236709CC1090E58921815 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4265CE69200BE37372C5E6F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		824A9DD11724E16400C9BD79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70281F71C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift in Sources */,
+				E70281FD1C8DEB390073F003 /* PreApprovalRowController.swift in Sources */,
+				E79F3A0E1C4EDFBB00B484A2 /* HomeTableViewController.swift in Sources */,
+				2EDF3CAF1951C3FB00841D1C /* RootVC.swift in Sources */,
+				E7F17F181C8797D100136C58 /* LeadsHandler.swift in Sources */,
+				E70281F91C8DE5860073F003 /* Lead.swift in Sources */,
+				E72678411C35C0300022C2E1 /* AppDelegate.swift in Sources */,
+				E70282001C8DF13B0073F003 /* SalesforceObjectType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E725F9CD1A5C8A4A00D6203C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F17F1A1C88E1A500136C58 /* LeadListInterfaceController.swift in Sources */,
+				E7F7F5B01A6738D2003CFD1C /* SalesforceObjectType.swift in Sources */,
+				E7F17F1C1C88E29D00136C58 /* LeadDetailsRowController.swift in Sources */,
+				E70281F31C8BB6DD0073F003 /* PreApprovalDetailsController.swift in Sources */,
+				E70281FB1C8DEAEC0073F003 /* PreApprovalsListInterfaceController.swift in Sources */,
+				E70B0DEB1AA7C2F7006E8CDE /* GlanceController.swift in Sources */,
+				E70281FA1C8DE7A00073F003 /* Lead.swift in Sources */,
+				E7F7F5A51A65C849003CFD1C /* Chevron.swift in Sources */,
+				E70281FE1C8DEB390073F003 /* PreApprovalRowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E72678371C35BE970022C2E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E725F9D01A5C8A4A00D6203C /* LightningRealtor WatchKit Extension */;
+			targetProxy = E72678361C35BE970022C2E1 /* PBXContainerItemProxy */;
+		};
+		E726783A1C35BE970022C2E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E725F9DA1A5C8A4A00D6203C /* LightningRealtor WatchKit App */;
+			targetProxy = E72678391C35BE970022C2E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		824A9DE11724E16400C9BD79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				824A9DE21724E16400C9BD79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		824A9DF91724E16400C9BD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		824A9DFA1724E16400C9BD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		824A9DFC1724E16400C9BD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1D8E74980285507883E8D0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SalesforceWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SalesforceSwiftBase/SalesforceWatch-Prefix.pch";
+				INFOPLIST_FILE = "SalesforceSwiftBase/SalesforceWatch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"SalesforceNetwork\"",
+					"-framework",
+					"\"SalesforceRestAPI\"",
+					"-framework",
+					"\"SalesforceSDKCore\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quintonwall.LightningRealtorApp;
+				PRODUCT_NAME = SalesforceWatch;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SalesforceSwiftBase/Classes/SalesforceSwiftBase-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		824A9DFD1724E16400C9BD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7EC0B941BAA0A5BA6D0809A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SalesforceWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SalesforceSwiftBase/SalesforceWatch-Prefix.pch";
+				INFOPLIST_FILE = "SalesforceSwiftBase/SalesforceWatch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"SalesforceNetwork\"",
+					"-framework",
+					"\"SalesforceRestAPI\"",
+					"-framework",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quintonwall.LightningRealtorApp;
+				PRODUCT_NAME = SalesforceWatch;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SalesforceSwiftBase/Classes/SalesforceSwiftBase-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E725F9EB1A5C8A4A00D6203C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IBSC_MODULE = SalesforceWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "SalesforceWatch WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quintonwall.LightningRealtorApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E725F9EC1A5C8A4A00D6203C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IBSC_MODULE = SalesforceWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "SalesforceWatch WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quintonwall.LightningRealtorApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		E725F9EE1A5C8A4A00D6203C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "SalesforceWatch WatchKit Extension/SalesforceWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SalesforceWatch WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quintonwall.LightningRealtorApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E725F9EF1A5C8A4A00D6203C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "SalesforceWatch WatchKit Extension/SalesforceWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SalesforceWatch WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quintonwall.LightningRealtorApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		824A9DD01724E16400C9BD79 /* Build configuration list for PBXProject "LightningRealtor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				824A9DF91724E16400C9BD79 /* Debug */,
+				824A9DFA1724E16400C9BD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		824A9DFB1724E16400C9BD79 /* Build configuration list for PBXNativeTarget "LightningRealtor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				824A9DFC1724E16400C9BD79 /* Debug */,
+				824A9DFD1724E16400C9BD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E725F9EA1A5C8A4A00D6203C /* Build configuration list for PBXNativeTarget "LightningRealtor WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E725F9EB1A5C8A4A00D6203C /* Debug */,
+				E725F9EC1A5C8A4A00D6203C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E725F9ED1A5C8A4A00D6203C /* Build configuration list for PBXNativeTarget "LightningRealtor WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E725F9EE1A5C8A4A00D6203C /* Debug */,
+				E725F9EF1A5C8A4A00D6203C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 824A9DCD1724E16400C9BD79 /* Project object */;
+}

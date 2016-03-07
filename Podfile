@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 use_frameworks!
 
-target 'SalesforceWatch' do
+#target 'LightningRealtor' do
 source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git' 
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -10,4 +10,5 @@ pod 'SalesforceNetwork'
 pod 'SalesforceRestAPI'
 
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-end
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+#end
