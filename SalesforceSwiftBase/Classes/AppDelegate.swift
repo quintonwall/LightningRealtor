@@ -30,6 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+       
+        if SFAuthenticationManager.sharedManager().haveValidSession {
+            showHomeScreen()
+        }
+
+        
         return true
     }
     
@@ -61,6 +68,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Salesforce Auth Stuff
     
+    func showHomeScreen() {
+        let mainSB : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginView : UIViewController = mainSB.instantiateViewControllerWithIdentifier("ListingsView") as UIViewController
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = loginView
+        self.window?.makeKeyAndVisible()
+    }
+
     override
     init()
     {
@@ -98,6 +113,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         leadsHandler.register()
+        
+        
     }
     
     

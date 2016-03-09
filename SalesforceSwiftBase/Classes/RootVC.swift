@@ -12,9 +12,21 @@ class RootVC: UIViewController, SFAuthenticationManagerDelegate {
     @IBOutlet weak var connectButton: UIButton!
     
     
+    @IBOutlet weak var tmpButton: UIButton!
     //  #pragma mark - view lifecycle
     
     override func viewWillAppear(animated: Bool) {
+        SFAuthenticationManager.sharedManager().addDelegate(self)
+        
+        if SFAuthenticationManager.sharedManager().haveValidSession {
+            print("VALID")
+            dispatch_async(dispatch_get_main_queue()){
+                
+                self.performSegueWithIdentifier("houseview", sender: self)
+                
+            }
+        }
+
        
     }
     
@@ -22,16 +34,21 @@ class RootVC: UIViewController, SFAuthenticationManagerDelegate {
         super.viewDidLoad()
         self.title = " Lightning Realtor"
         
+        /*
         SFAuthenticationManager.sharedManager().addDelegate(self)
         
         if SFAuthenticationManager.sharedManager().haveValidSession {
             print("VALID")
             dispatch_async(dispatch_get_main_queue()){
                 
-                self.performSegueWithIdentifier("loggedin", sender: self)
+                self.performSegueWithIdentifier("houseview", sender: self)
                 
             }
         }
+*/
+    }
+    @IBAction func tmpTapped(sender: AnyObject) {
+        self.performSegueWithIdentifier("houseview", sender: nil)
     }
     
     @IBAction func connectTapped(sender: AnyObject) {
@@ -46,7 +63,7 @@ class RootVC: UIViewController, SFAuthenticationManagerDelegate {
         
         if SFAuthenticationManager.sharedManager().haveValidSession {
             
-            self.performSegueWithIdentifier("loggedin", sender: nil)
+            self.performSegueWithIdentifier("houseview", sender: nil)
         }
     }
  
