@@ -16,31 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-background" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-4R-VUe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="round-logo" translatesAutoresizingMaskIntoConstraints="NO" id="osE-Gm-Wi0">
                                 <rect key="frame" x="190" y="257" width="220" height="220"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="GVX-2r-2J9"/>
-                                    <constraint firstAttribute="height" constant="220" id="qd3-i1-JFB"/>
+                                    <constraint firstAttribute="width" constant="220" id="GVX-2r-2J9">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="220" id="qd3-i1-JFB">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lightning Realtor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-8p-6P7">
                                 <rect key="frame" x="162" y="146" width="276" height="48"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="osE-Gm-Wi0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0vZ-Tq-6bU"/>
+                            <constraint firstItem="Lbo-8p-6P7" firstAttribute="top" secondItem="osE-Gm-Wi0" secondAttribute="bottom" constant="44" id="1kg-07-fRZ"/>
+                            <constraint firstItem="9Ue-4R-VUe" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="3Xc-hQ-4n3"/>
                             <constraint firstItem="Lbo-8p-6P7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="G9k-TD-rRS"/>
-                            <constraint firstItem="osE-Gm-Wi0" firstAttribute="top" secondItem="Lbo-8p-6P7" secondAttribute="bottom" constant="63" id="JrH-PT-7SN"/>
+                            <constraint firstItem="osE-Gm-Wi0" firstAttribute="top" secondItem="Lbo-8p-6P7" secondAttribute="bottom" constant="63" id="JrH-PT-7SN">
+                                <variation key="heightClass=regular-widthClass=compact" constant="284"/>
+                            </constraint>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="osE-Gm-Wi0" secondAttribute="bottom" constant="123" id="WZG-yS-BED"/>
+                            <constraint firstItem="9Ue-4R-VUe" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="g3V-1C-TxN"/>
                             <constraint firstItem="Lbo-8p-6P7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n6l-KM-XZg"/>
+                            <constraint firstItem="9Ue-4R-VUe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vCm-cN-xzm"/>
+                            <constraint firstItem="9Ue-4R-VUe" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="yd3-G4-xKG"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="1kg-07-fRZ"/>
                                 <exclude reference="G9k-TD-rRS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="JrH-PT-7SN"/>
+                                <include reference="1kg-07-fRZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -51,6 +72,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="launch-background" width="1440" height="2560"/>
         <image name="round-logo" width="167" height="167"/>
     </resources>
 </document>
