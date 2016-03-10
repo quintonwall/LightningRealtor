@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        
         if SFAuthenticationManager.sharedManager().haveValidSession {
+            leadsHandler.register()
             showHomeScreen()
         }
 

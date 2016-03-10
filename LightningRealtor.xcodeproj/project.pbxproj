@@ -31,6 +31,10 @@
 		E72CBCDB1C8F4CE400686548 /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CBCDA1C8F4CE400686548 /* HouseCell.swift */; };
 		E72CBCDD1C8F810400686548 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CBCDC1C8F810400686548 /* House.swift */; };
 		E72CBCDF1C90854200686548 /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CBCDE1C90854200686548 /* PropertyViewController.swift */; };
+		E72CBCE11C91D72F00686548 /* HouseListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CBCE01C91D72F00686548 /* HouseListInterfaceController.swift */; };
+		E72CBCE31C91D7A700686548 /* HouseDetailRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CBCE21C91D7A700686548 /* HouseDetailRowController.swift */; };
+		E72CBCE41C91D7A700686548 /* HouseDetailRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CBCE21C91D7A700686548 /* HouseDetailRowController.swift */; };
+		E72CBCE51C91D7AD00686548 /* HouseListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CBCE01C91D72F00686548 /* HouseListInterfaceController.swift */; };
 		E7EFDD811A684CC80022AB99 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFDD801A684CC80022AB99 /* Interface.storyboard */; };
 		E7F17F181C8797D100136C58 /* LeadsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F17F171C8797D100136C58 /* LeadsHandler.swift */; };
 		E7F17F1A1C88E1A500136C58 /* LeadListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F17F191C88E1A500136C58 /* LeadListInterfaceController.swift */; };
@@ -132,6 +136,8 @@
 		E72CBCDA1C8F4CE400686548 /* HouseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
 		E72CBCDC1C8F810400686548 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		E72CBCDE1C90854200686548 /* PropertyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
+		E72CBCE01C91D72F00686548 /* HouseListInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseListInterfaceController.swift; sourceTree = "<group>"; };
+		E72CBCE21C91D7A700686548 /* HouseDetailRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseDetailRowController.swift; sourceTree = "<group>"; };
 		E7384EAB1C4DB7B90029D724 /* SalesforceMobileSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceMobileSDK_iOS.framework; path = "Pods/../build/Debug-iphoneos/SalesforceMobileSDK_iOS.framework"; sourceTree = "<group>"; };
 		E7384EAD1C4DB7FA0029D724 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "Pods/../build/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
 		E7384EB01C4DBB3E0029D724 /* SalesforceMobileSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SalesforceMobileSDK_iOS.framework; path = "Pods/../build/Debug-iphoneos/SalesforceMobileSDK_iOS.framework"; sourceTree = "<group>"; };
@@ -351,6 +357,8 @@
 				E70281F11C8BAA6A0073F003 /* PreApprovalDetailsController.swift */,
 				E70281F61C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift */,
 				E70281FC1C8DEB390073F003 /* PreApprovalRowController.swift */,
+				E72CBCE01C91D72F00686548 /* HouseListInterfaceController.swift */,
+				E72CBCE21C91D7A700686548 /* HouseDetailRowController.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -583,11 +591,13 @@
 			files = (
 				E72CBCD91C8F4C4A00686548 /* HouseCollectionViewController.swift in Sources */,
 				E70281F71C8DE4F00073F003 /* PreApprovalsListInterfaceController.swift in Sources */,
+				E72CBCE11C91D72F00686548 /* HouseListInterfaceController.swift in Sources */,
 				E72CBCDD1C8F810400686548 /* House.swift in Sources */,
 				E70281FD1C8DEB390073F003 /* PreApprovalRowController.swift in Sources */,
 				2EDF3CAF1951C3FB00841D1C /* RootVC.swift in Sources */,
 				E7F17F181C8797D100136C58 /* LeadsHandler.swift in Sources */,
 				E72CBCDF1C90854200686548 /* PropertyViewController.swift in Sources */,
+				E72CBCE31C91D7A700686548 /* HouseDetailRowController.swift in Sources */,
 				E70281F91C8DE5860073F003 /* Lead.swift in Sources */,
 				E72678411C35C0300022C2E1 /* AppDelegate.swift in Sources */,
 				E72CBCDB1C8F4CE400686548 /* HouseCell.swift in Sources */,
@@ -604,9 +614,11 @@
 				E7F17F1C1C88E29D00136C58 /* LeadDetailsRowController.swift in Sources */,
 				E70281F31C8BB6DD0073F003 /* PreApprovalDetailsController.swift in Sources */,
 				E70281FB1C8DEAEC0073F003 /* PreApprovalsListInterfaceController.swift in Sources */,
+				E72CBCE51C91D7AD00686548 /* HouseListInterfaceController.swift in Sources */,
 				E70B0DEB1AA7C2F7006E8CDE /* GlanceController.swift in Sources */,
 				E70281FA1C8DE7A00073F003 /* Lead.swift in Sources */,
 				E7F7F5A51A65C849003CFD1C /* Chevron.swift in Sources */,
+				E72CBCE41C91D7A700686548 /* HouseDetailRowController.swift in Sources */,
 				E70281FE1C8DEB390073F003 /* PreApprovalRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

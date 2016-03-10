@@ -183,7 +183,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="connectButton" destination="3oE-EZ-6Yy" id="kM1-IW-jEF"/>
-                        <segue destination="M8F-ND-kua" kind="show" identifier="houseview" id="2NA-b3-ZqT"/>
+                        <segue destination="GON-MM-3Oe" kind="show" identifier="houseview" id="2NA-b3-ZqT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4g-y3-sMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,7 +198,7 @@
                         <viewControllerLayoutGuide type="top" id="YJd-n3-qAo"/>
                         <viewControllerLayoutGuide type="bottom" id="SAV-TI-vFg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="L0l-Lv-fcK">
+                    <view key="view" contentMode="scaleAspectFit" id="L0l-Lv-fcK">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="euL-26-XUE">
@@ -380,9 +380,12 @@
                         <color key="backgroundColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="euL-26-XUE" firstAttribute="top" secondItem="YJd-n3-qAo" secondAttribute="bottom" id="Ii9-gW-5MP"/>
+                            <constraint firstItem="euL-26-XUE" firstAttribute="bottom" secondItem="SAV-TI-vFg" secondAttribute="top" id="Rh5-ON-Y8I"/>
                             <constraint firstItem="euL-26-XUE" firstAttribute="width" secondItem="L0l-Lv-fcK" secondAttribute="width" id="Um1-ch-GmY"/>
                             <constraint firstItem="euL-26-XUE" firstAttribute="leading" secondItem="L0l-Lv-fcK" secondAttribute="leading" id="WZ3-6i-lcZ"/>
-                            <constraint firstItem="euL-26-XUE" firstAttribute="height" secondItem="L0l-Lv-fcK" secondAttribute="height" id="sk8-DV-I12"/>
+                            <constraint firstItem="euL-26-XUE" firstAttribute="height" secondItem="L0l-Lv-fcK" secondAttribute="height" id="sk8-DV-I12">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-69"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -390,6 +393,7 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Ii9-gW-5MP"/>
+                                <exclude reference="Rh5-ON-Y8I"/>
                                 <exclude reference="Um1-ch-GmY"/>
                                 <exclude reference="WZ3-6i-lcZ"/>
                                 <exclude reference="sk8-DV-I12"/>
@@ -401,23 +405,46 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="Ii9-gW-5MP"/>
+                                <include reference="Rh5-ON-Y8I"/>
                                 <include reference="Um1-ch-GmY"/>
                                 <include reference="WZ3-6i-lcZ"/>
-                                <include reference="sk8-DV-I12"/>
+                                <exclude reference="sk8-DV-I12"/>
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" title="Likes" image="favorite" selectedImage="favorite" id="u2Q-4h-GO4"/>
                     <connections>
                         <outlet property="collectionView" destination="euL-26-XUE" id="UgE-s4-2LG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fr3-sh-xJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2116.5" y="589.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="K4M-ZJ-deU">
+            <objects>
+                <tabBarController extendedLayoutIncludesOpaqueBars="YES" id="GON-MM-3Oe" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="LTX-ZQ-uRm">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="M8F-ND-kua" kind="relationship" relationship="viewControllers" id="RLh-uX-K3Y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gf-HC-ZFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="1198.5" y="589.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="bgimage-login" width="375" height="453"/>
+        <image name="favorite" width="20" height="20"/>
         <image name="heart" width="92" height="86"/>
         <image name="login-button" width="230" height="61"/>
         <image name="round-logo" width="167" height="167"/>

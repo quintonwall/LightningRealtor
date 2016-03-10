@@ -15,35 +15,29 @@ class LeadListInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBOutlet weak var resultsTable: WKInterfaceTable!
     // MARK: Interface Life Cycle
+    var houseId : String?
     
     
     //used to register the watch and paired phone
     var session : WCSession!
     
-    //if app starts from the glance
-    override func handleUserActivity(userInfo: [NSObject : AnyObject]!) {
-        
-        if let results = userInfo["results"] as? NSArray {
-            loadTableData(results)
-        }
-    }
     
-    //if context comes from a prepareForSeque call
     override func awakeWithContext(context: AnyObject?) {
-        
-        
+        precondition(context is Dictionary<String, String> , "Expected class of `context` to be dictionary containing houseid.")
         
         if (WCSession.isSupported()) {
             session = WCSession.defaultSession()
             session.delegate = self
             session.activateSession()
-            self.getLeadList()
         }
-    }
-    
-    private func getLeadList() {
         
-        let applicationData = ["request-type":"property-leads"]
+        let record = context as! Dictionary<String, String>
+        self.houseId = record["houseid"]
+       
+        let id:NSString = self.houseId!
+        
+        let applicationData = ["request-type" : "leads-for-house", "id" : id]
+        
         
         if (WCSession.defaultSession().reachable) {
             session.sendMessage(applicationData, replyHandler: { reply in
@@ -63,8 +57,20 @@ class LeadListInterfaceController: WKInterfaceController, WCSessionDelegate {
             })
         }
         
+        
+        
+        
     }
     
+    //if app starts from the glance
+    override func handleUserActivity(userInfo: [NSObject : AnyObject]!) {
+        
+        if let results = userInfo["results"] as? NSArray {
+            loadTableData(results)
+        }
+    }
+    
+
     private func loadTableData(results: NSArray) {
         
         //withRowType needs to be the identifier you give the table in your storyboard

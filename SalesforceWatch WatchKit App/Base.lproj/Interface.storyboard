@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jGj-f2-m08">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nhq-ZG-rqR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
+        <!--Properties-->
+        <scene sceneID="Tpg-gu-tlL">
+            <objects>
+                <controller identifier="Properties" title="Properties" id="nhq-ZG-rqR" customClass="HouseListInterfaceController" customModule="LightningRealtor_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="zaS-8v-c7e">
+                            <items>
+                                <tableRow identifier="HouseRow" id="7cO-4w-PXq" customClass="HouseDetailRowController" customModule="LightningRealtor_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="40" alignment="left" id="bc7-db-VWW">
+                                        <items>
+                                            <group width="30" height="30" alignment="left" verticalAlignment="center" radius="15" id="zkc-HZ-JA2" userLabel="Rounder">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" id="fCe-xV-Mx2"/>
+                                                </items>
+                                            </group>
+                                            <group width="0.59999999999999998" alignment="right" verticalAlignment="center" id="meb-YL-TIs">
+                                                <items>
+                                                    <imageView width="20" height="20" alignment="left" verticalAlignment="center" image="heartred" animationDuration="1" id="qZt-6t-yXd"/>
+                                                    <label width="0.69999999999999996" alignment="left" verticalAlignment="center" text="99" id="LCX-6E-dCi"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="numLikes" destination="LCX-6E-dCi" id="IXc-3I-PAD"/>
+                                        <outlet property="propertyImage" destination="fCe-xV-Mx2" id="alw-XY-w3p"/>
+                                        <segue destination="jGj-f2-m08" kind="modal" identifier="leadsForHouse" id="lJu-Ih-jmC"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="resultsTable" destination="zaS-8v-c7e" id="Zwl-n2-mou"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="46" y="-310"/>
+        </scene>
         <!--Customers-->
         <scene sceneID="cvC-rm-6me">
             <objects>

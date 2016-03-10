@@ -75,22 +75,39 @@ class LeadsHandler: NSObject, WCSessionDelegate {
                 }
                 
             }
+            else if(reqType == "houses-list") {
+                
+                let query = String("select count(id), house__c, house__r.Default_picture_URL__c from Lead where LeadSource = 'Mobile App' group by house__r.Default_picture_URL__c, house__c order by count(id) DESC")
+                
+                sharedInstance.performSOQLQuery(query, failBlock: { error in
+                    replyHandler(["error": error])
+                    }) { response in  //success
+                        //watchos2 only lets us pass primitive types. We need to convert
+                        //the dictionary response from salesforce into a json string to pass to
+                        //the watch, and then recreate it on the other side..
+                        let json = JSON(response)
+                        replyHandler(["success": json.rawString()!])
+                }
+                
+            }
+            else if(reqType == "leads-for-house") {
+                
+                let houseid = message["id"] as! String
+                
+                let query = String("select Name, FirstName, LastName, House__c, House__r.Default_picture_URL__c, Id From Lead where House__c = '"+houseid+"'")
+                
+                sharedInstance.performSOQLQuery(query, failBlock: { error in
+                    replyHandler(["error": error])
+                    }) { response in  //success
+                        //watchos2 only lets us pass primitive types. We need to convert
+                        //the dictionary response from salesforce into a json string to pass to
+                        //the watch, and then recreate it on the other side..
+                        let json = JSON(response)
+                        replyHandler(["success": json.rawString()!])
+                }
+            }
             
         }
     }
     
-    /*
-    func getPropertyLeads() {
-        
-        let sharedInstance = SFRestAPI.sharedInstance()
-        
-        let query = String("select Name, FirstName, LastName, House__r.Default_picture_URL__c, Id From Lead where LeadSource = 'Mobile App' order by LastModifiedDate")
-        
-         sharedInstance.performSOQLQuery(query, failBlock: { error in
-                print(error)
-            }) { response in //success
-                print("success: \(response)")
-        }
-    }
-*/
-}
+   }
